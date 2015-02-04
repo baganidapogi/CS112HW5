@@ -1,6 +1,7 @@
+<% provide(:title, 'Show Item') %>
 <h1><%= @item.name %></h1>
 <p>Item Code: <%= @item.code %></p>
 <p>Description: <%= @item.description %></p>
 <p>Price: <%= @item.price %></p>
 
-<%= link_to "Back to items", items_path %>
+<%= link_to "Back to items", items_path%>

@@ -3,7 +3,11 @@
  * listed below.
  *
  * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+
  * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+
  *
  * You're free to add application-wide styles to this file and they'll appear at the bottom of the
  * compiled file so the styles you add here take precedence over styles defined in any styles
@@ -13,3 +17,42 @@
  *= require_tree .
  *= require_self
  */
+
+.navbar-custom {
+    background-color:#FCA604;
+    color:#ffffff;
+    border-radius:0;
+}
+
+.navbar-custom .navbar-nav > li > a {
+    color:#fff;
+}
+
+.navbar-custom .navbar-nav > .active > a, .navbar-nav > .active > a:hover, .navbar-nav > .active > a:focus {
+    color: #ffffff;
+    background-color:transparent;
+}
+
+.navbar-custom .navbar-brand {
+    color:#eeeeee;
+}
+
+.navbar-custom .navbar-nav > li > a:hover, .nav > li > a:focus { 
+	text-decoration: none; background-color: #D18903; 
+}
+
+.navbar-custom .navbar-link { 
+	color:#fff;
+}
+
+.btn-custom {
+  color: #fff;
+  background-color: #FCA604
+  border-color: #FCA604;
+}
+
+.btn-custom:hover, .btn-custom:focus, .btn-custom.focus, .btn-custom:active, .btn-custom.active, .open > .btn-custom.dropdown-toggle {
+  color: #fff;
+  background-color: #D18903;
+  border-color: #D18903;
+}

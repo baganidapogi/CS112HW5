@@ -11,6 +11,8 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'simple_form'
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw]
+gem 'devise'
+gem 'bootstrap-sass', '3.3.2'
 
 group :production do
   gem 'thin'
