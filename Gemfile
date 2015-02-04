@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 gem 'rails', '4.2.0'
 gem 'sqlite3', :group => [:development, :test]
 gem 'sass-rails', '~> 5.0'
+gem 'sass', '~> 3.4.11'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
 gem 'jquery-rails'

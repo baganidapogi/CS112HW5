@@ -179,6 +179,7 @@ DEPENDENCIES
   pg
   rails (= 4.2.0)
   rails_12factor
+  sass (~> 3.4.11)
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
   simple_form
