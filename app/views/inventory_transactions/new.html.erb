@@ -1,0 +1,10 @@
+<h1>New Inventory Transaction Item</h1>
+
+<%= simple_form_for(@inventory_transaction) do |f| %>
+  <%= f.association :inventory_item %>
+  <%= f.input :transacted_at %>
+  <%= f.input :transaction_type, :as => :select, :collection => InventoryTransaction::TRANSACTION_TYPES %>
+  <%= f.input :quantity %>
+  <hr>
+  <%= f.submit "Make Transaction" %>
+<% end %>

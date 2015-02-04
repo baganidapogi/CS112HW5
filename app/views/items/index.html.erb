@@ -1,0 +1,27 @@
+<h1>Item Supplier</h1>
+<!-- admins should only see add shop item -->
+<%= link_to "Get New Shop Item", new_item_path %>
+<!-- users should only see your cart -->
+<%= link_to "View Shop", inventory_items_path %>
+
+<table width="100%">
+  <tr>
+    <th>Name</th>
+    <th>Code</th>
+    <th> Price</th>
+    <th>Actions</th>
+  </tr>
+  <% @items.each do |item| %>
+    <tr>
+      <td><%= item.name %></td>
+      <td><%= item.code %></td>
+      <td><%= item.price %></td>
+      <td>
+        <%= link_to "Show Item", item_path(item.id) %>
+        <!--%= link_to "Edit", edit_item_path(item.id) %-->
+        <!-- destroy needs to check if there are carts with that item, otherwise, it screws up the entire cart system -->
+        <!--%= link_to "Destroy", item_path(item.id), :method => :delete, :data => { :confirm => "Are you sure?" } %-->
+      </td>
+    </tr>
+  <% end %>
+</table>

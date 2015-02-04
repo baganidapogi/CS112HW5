@@ -1,0 +1,31 @@
+<h1>Item Shop</h1>
+
+<%= link_to "Item Supplier", items_path %>
+<%= link_to "Add Item To Shop", new_inventory_item_path %>
+<%= link_to "Check Out Cart", new_inventory_transaction_path %>
+<!-- admins should only see transaction history -->
+<%= link_to "Transaction History", inventory_transactions_path %>
+
+<table width="100%">
+  <tr>
+    <th>Item</th>
+    <th>Quantity</th>
+    <th>Price Per Unit</th>
+    <th>Total Price</th>
+    <th>Actions</th>
+  </tr>
+  <% @inventory_items.each do |inventory_item| %>
+    <tr>
+      <td><%= inventory_item.item.name %> (<%= inventory_item.item.code %>)</td>
+      <td><%= inventory_item.quantity %></td>
+      <td><%= inventory_item.item.price %></td>
+      <td><%= inventory_item.total %></td>
+      <td>
+        <%= link_to "Show", inventory_item_path(inventory_item.id) %>
+        <%= link_to "Edit", edit_inventory_item_path(inventory_item.id) %>
+        <%= link_to "Remove from Shop", inventory_item_path(inventory_item.id), :method => :delete, :data => { :confirm => "Are you sure?" } %>
+      </td>
+    </tr>
+  <% end %>
+</table>
+

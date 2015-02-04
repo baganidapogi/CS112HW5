@@ -1,0 +1,20 @@
+<h1>Inventory: <%= @inventory_item.item %></h1>
+<h2>Quantity: <%= @inventory_item.quantity %></h2>
+
+<h3>Transactions</h3>
+<table>
+  <tr>
+    <th>Date</th>
+    <th>Type</th>
+    <th>Quantity</th>
+  </tr>
+  <% @inventory_item.inventory_transactions.each do |transaction| %>
+    <tr>
+      <td><%= transaction.transacted_at %></td>
+      <td><%= transaction.transaction_type %></td>
+      <td><%= transaction.quantity %></td>
+    </tr>
+  <% end %>
+</table>
+
+<%= link_to "Back to Inventory", inventory_items_path %>

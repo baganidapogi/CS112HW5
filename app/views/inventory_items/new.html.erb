@@ -1,0 +1,10 @@
+<h1>New Inventory Item</h1>
+
+<%= simple_form_for(@inventory_item) do |f| %>
+  <%= f.association :item %>
+  <%= f.input :quantity %>
+  <hr>
+  <%= f.submit "Save Record" %>
+<% end %>
+
+<%= link_to "Back to inventory_items", inventory_items_path %>

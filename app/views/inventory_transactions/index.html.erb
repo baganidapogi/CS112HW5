@@ -1,0 +1,22 @@
+<h1>Transaction History</h1>
+
+<%= link_to "Shop", inventory_items_path %>
+<%= link_to "Item Supplier", items_path %>
+
+<table width="100%">
+  <tr>
+    <th>Shop Item</th>
+    <th>Quantity</th>
+    <th>Transaction Date</th>
+    <th>Type</th>
+  </tr>
+  <% @inventory_transactions.each do |inventory_transaction| %>
+    <tr>
+      <td><%= inventory_transaction.to_x %></td>
+      <td><%= inventory_transaction.quantity %></td>
+      <td><%= inventory_transaction.transacted_at %></td>
+      <td><%= inventory_transaction.transaction_type %></td>
+    </tr>
+  <% end %>
+</table>
+

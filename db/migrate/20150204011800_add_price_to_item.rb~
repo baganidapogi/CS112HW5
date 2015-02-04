@@ -1,0 +1,4 @@
+class AddPriceToItem < ActiveRecord::Migration
+  def change
+  end
+end
